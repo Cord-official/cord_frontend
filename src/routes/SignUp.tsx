@@ -32,7 +32,7 @@ const SignUp = () => {
         break
     }
   }
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!email && name && nickName && password) {
       const { data } = await client.mutate({
